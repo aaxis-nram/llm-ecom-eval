@@ -1,0 +1,41 @@
+{
+    "contents": [
+        {
+            "role": "user",
+            "parts": [
+                {
+                    "text": "In the data section is a list of tickets for customer support."
+                },
+                {
+                    "text": "Rewrite the ticket description removing any text that appears to be from a template and is repeating in each ticket. " 
+                },
+                {
+                    "text": "Output the most likely ticket type and ticket subtype for each request from the ticket_types provided."
+                }
+            ]
+        }
+    ],
+    "generationConfig": {
+        "maxOutputTokens": 8192,
+        "temperature": 1,
+        "topP": 0.95,
+    },
+    "safetySettings": [
+        {
+            "category": "HARM_CATEGORY_HATE_SPEECH",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+            "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+            "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+            "category": "HARM_CATEGORY_HARASSMENT",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        }
+    ]
+}
